@@ -1,0 +1,17 @@
+{##}
+{% if publications %}
+    <h2 class="ui  header">Список публикаций</h2>
+    <ol class="ui list">
+    
+    {% for p in publications %}
+        <li>
+          {% partial '@publication' publication = p showIndextion = true %}
+        </li>        
+    {% endfor %}
+    <ol>
+{% else %}
+    <h2 class="ui  header">По вашему запросу не найдено публикаций</h2>
+{% endif %}
+
+
+{# author.artRiscTotal ? author.artRiscTotal|number_format(2) #}
