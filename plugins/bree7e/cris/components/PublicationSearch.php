@@ -65,6 +65,8 @@ class PublicationSearch extends ComponentBase
         $type = post('type') ?? "0"; // 1,2,3,...
         $index = post('index') ?? "all"; // all,wos,scopus,risc
         $project = post('project') ?? 0; //id
+        $sort_argument = post('sort_argument') ?? "author";
+        $sort_following = post('sort_following') ?? "increasing";
 
         // если указан автор, то не учитвать подразделение
         if ($author > 0) {
@@ -113,7 +115,10 @@ class PublicationSearch extends ComponentBase
             $query = $query->ofAuthors([$author]);
         }
 
-        $publications = $query->get()->sortBy('authors');
+        if ($sort_following == "increasing")
+            $publications = $query->get()->sortBy($sort_argument);
+        else if ($sort_following == "decreasing")
+            $publications = $query->get()->sortByDesc($sort_argument);
 
         if ($publications->isEmpty()) {
             unset($this->page['publications']);
@@ -123,3 +128,4 @@ class PublicationSearch extends ComponentBase
 
     }
 }
+

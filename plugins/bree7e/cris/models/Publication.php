@@ -165,7 +165,26 @@ class Publication extends Model
             }
         }
 
-        if ($this->is_scopus) return 'Scopus';
+        if ($this->is_scopus) {
+            if (!$this->quartile_scopus) return 'Scopus';
+            switch ($this->quartile_scopus) {
+                case 'Q1':
+                    return 'Scopus Q1';
+                    break;
+                case 'Q2':
+                    return 'Scopus Q2';
+                    break;
+                case 'Q3':
+                    return 'Scopus Q3';
+                    break;
+                case 'Q4':
+                    return 'Scopus Q4';
+                    break;                
+                case 'Q5':
+                    return 'Scopus Emerging Sources Citation Index';
+                    break;                
+            }
+        }
         if ($this->is_risc && $this->is_vak) return 'ВАК + РИНЦ';
         if ($this->is_risc) return 'РИНЦ';
         if ($this->is_vak) return 'ВАК';

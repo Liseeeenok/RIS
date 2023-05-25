@@ -197,6 +197,16 @@ fields:
             field: publicationtype
             condition: 'value[4]'
         type: text
+    eid:
+        label: EID
+        span: auto
+        type: text
+        comment: 'Например: 2-s2.0-85121470772'
+    wosid:
+        label: WOSID
+        span: auto
+        type: text
+        comment: 'Например: 000795876800003'
     doi:
         label: DOI
         span: auto
@@ -255,10 +265,25 @@ fields:
             Q3: Q3
             Q4: Q4
             Q5: 'Emerging Sources Citation Index'
-        span: auto
+        span: right
         trigger:
             action: show
             field: is_wos
+            condition: checked
+        type: radio
+    quartile_scopus:
+        label: 'Квартиль Scopus'
+        oc.commentPosition: ''
+        options:
+            Q1: Q1
+            Q2: Q2
+            Q3: Q3
+            Q4: Q4
+            Q5: 'Emerging Sources Citation Index'
+        span: right 
+        trigger:
+            action: show
+            field: is_scopus
             condition: checked
         type: radio
     is_scopus:
@@ -269,6 +294,7 @@ fields:
             field: publicationtype
             condition: 'value[1][2]'
         type: checkbox
+    
     is_risc:
         label: РИНЦ
         span: left
@@ -326,3 +352,5 @@ fields:
         span: auto
         type: switch
         comment: 'Разрешение на скачивание файла публикации'
+
+

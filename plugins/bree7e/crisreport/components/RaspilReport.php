@@ -55,7 +55,23 @@ class RaspilReport extends ComponentBase
                             break;
                     }
                 } elseif ($p->is_scopus) {
-                    $k = $request['art-scopus'];
+                    switch ($p->quartile_scopus) {
+                        case 'Q1':
+                            $k = $request['art-scopus-q1'];
+                            break;
+                        case 'Q2':
+                            $k = $request['art-scopus-q2'];
+                            break;
+                        case 'Q3':
+                            $k = $request['art-scopus-q3'];
+                            break;
+                        case 'Q4':
+                            $k = $request['art-scopus-q4'];
+                            break;
+                        default:
+                            $k = $request['art-scopus-q5'];
+                            break;
+                    }
                 } elseif ($p->is_risc) {
                     $k = $request['art-risc'];
                 }
@@ -121,7 +137,11 @@ class RaspilReport extends ComponentBase
         $author->artWosQ3Total = 0;
         $author->artWosQ4Total = 0;
         $author->artWosQ5Total = 0;
-        $author->artScopusTotal = 0;
+        $author->artScopusQ1Total = 0;
+        $author->artScopusQ2Total = 0;
+        $author->artScopusQ3Total = 0;
+        $author->artScopusQ4Total = 0;
+        $author->artScopusQ5Total = 0;
         $author->artRiscTotal = 0;
         $author->procWosTotal = 0;
         $author->procScopusTotal = 0;
@@ -158,7 +178,27 @@ class RaspilReport extends ComponentBase
                         }
                     }
                 } elseif ($publication->is_scopus) {
-                    $author->artScopusTotal += $publication->dividedK;
+                    if (!$publication->quartile_scopus) {
+                        $author->artScopusQ5Total += $publication->dividedK;
+                    } else {
+                        switch ($publication->quartile_scopus) {
+                            case 'Q1':
+                                $author->artScopusQ1Total += $publication->dividedK;
+                                break;
+                            case 'Q2':
+                                $author->artScopusQ2Total += $publication->dividedK;
+                                break;
+                            case 'Q3':
+                                $author->artScopusQ3Total += $publication->dividedK;
+                                break;
+                            case 'Q4':
+                                $author->artScopusQ4Total += $publication->dividedK;
+                                break;
+                            case 'Q5':
+                                $author->artScopusQ5Total += $publication->dividedK;
+                                break;
+                        }
+                    }
                 } elseif ($publication->is_risc) {
                     $author->artRiscTotal += $publication->dividedK;
                 }
@@ -287,7 +327,11 @@ class RaspilReport extends ComponentBase
                 $a->artWosQ3Total +
                 $a->artWosQ4Total +
                 $a->artWosQ5Total +
-                $a->artScopusTotal +
+                $a->artScopusQ1Total +
+                $a->artScopusQ2Total +
+                $a->artScopusQ3Total +
+                $a->artScopusQ4Total +
+                $a->artScopusQ5Total +
                 $a->artRiscTotal +
                 $a->procWosTotal +
                 $a->procScopusTotal +
@@ -329,3 +373,4 @@ class RaspilReport extends ComponentBase
         $this->departments = $departments;
     }
 }
+

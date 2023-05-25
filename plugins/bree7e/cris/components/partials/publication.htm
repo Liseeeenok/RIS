@@ -16,8 +16,8 @@
         {{- ". — №" ~ publication.number|trim -}}
     {%- endif %}
     {{- publication.pages ? pages ~ publication.pages|trim ~ "." -}}
-    {{- publication.doi ? " DOI: " ~ publication.doi ~ "." -}}
-    {{- publication.url ? " URL: " ~ publication.url ~ "." -}}
+    {{- publication.doi ? " DOI: " -}}<a href="https://doi.org/{{ publication.doi }}">{{- publication.doi ? publication.doi -}}</a>{{- publication.doi ? "." -}}
+    {{- publication.url ? " URL: " -}}<a href="{{ publication.url }}">{{- publication.url ? publication.url -}}</a>{{- publication.url ? "." -}}
 {% elseif publication.publication_type_id == 3 %}
     <i>{{ publication.authors }}</i> {{ publication.title }}: Свидетельство о государственной регистрации программ для ЭВМ №{{ publication.number }} от {{ publication.published_at|date("d.m.Y") }} М.: Федеральная служба по интеллектуальной собственности, патентам и товарным знакам, {{ publication.year }}.
 {% elseif publication.publication_type_id == 6 %}
