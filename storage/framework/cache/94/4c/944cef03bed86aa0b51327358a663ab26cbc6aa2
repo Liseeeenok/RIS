@@ -1,0 +1,21 @@
+1699708128a:1:{s:19:"staticmenu/main.htm";a:5:{s:8:"fileName";s:19:"staticmenu/main.htm";s:7:"content";s:377:"{##}
+{% for item in items if not item.viewBag.isHidden %}
+    {% if item.url %}
+        <a href="{{ item.url }}" {{ item.viewBag.isExternal ? 'target="_blank"' }}
+            class="item {{ item.isActive ? 'active' : '' }} {{ item.viewBag.cssClass }}">
+            {{ item.title }} 
+        </a>
+    {% else %}
+        <span>{{ item.title }}</span>
+    {% endif %}
+{% endfor %}";s:5:"mtime";i:1685520246;s:6:"markup";s:377:"{##}
+{% for item in items if not item.viewBag.isHidden %}
+    {% if item.url %}
+        <a href="{{ item.url }}" {{ item.viewBag.isExternal ? 'target="_blank"' }}
+            class="item {{ item.isActive ? 'active' : '' }} {{ item.viewBag.cssClass }}">
+            {{ item.title }} 
+        </a>
+    {% else %}
+        <span>{{ item.title }}</span>
+    {% endif %}
+{% endfor %}";s:4:"code";N;}}

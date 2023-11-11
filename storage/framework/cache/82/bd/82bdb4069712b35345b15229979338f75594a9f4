@@ -1,0 +1,9 @@
+1699708128a:1:{s:27:"account/add-second-step.htm";a:9:{s:8:"fileName";s:27:"account/add-second-step.htm";s:7:"content";s:180:"title = "Привязка авторов к публикации"
+url = "/account/publications/add/authors"
+is_hidden = 0
+
+[addAuthorsForm]
+==
+{##}
+{% component 'addAuthorsForm' %}";s:5:"mtime";i:1681131961;s:6:"markup";s:37:"{##}
+{% component 'addAuthorsForm' %}";s:4:"code";N;s:5:"title";s:55:"Привязка авторов к публикации";s:3:"url";s:33:"/account/publications/add/authors";s:9:"is_hidden";s:1:"0";s:14:"addAuthorsForm";a:0:{}}}

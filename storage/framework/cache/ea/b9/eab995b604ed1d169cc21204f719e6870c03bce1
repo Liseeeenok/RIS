@@ -1,0 +1,51 @@
+1695887198a:1:{s:18:"account/update.htm";a:5:{s:8:"fileName";s:18:"account/update.htm";s:7:"content";s:846:"{##}
+{{ form_ajax('onUpdate', { model: user, class: 'ui form column'} ) }}
+
+<div class="field">
+    <label for="accountName">Логин</label>
+    <input name="name" type="text" id="accountName" value="{{ form_value('name') }}">
+</div>
+
+<div class="field">
+    <label for="accountEmail">Email</label>
+    <input name="email" type="email" id="accountEmail" value="{{ form_value('email') }}">
+</div>
+
+<div class="field">
+    <label for="accountPassword">Новый пароль</label>
+    <input name="password" type="password" id="accountPassword">
+</div>
+
+<div class="field">
+    <label for="accountPasswordConfirm">Подтверждение пароля</label>
+    <input name="password_confirmation" type="password" id="accountPasswordConfirm">
+</div>
+
+<button type="submit" class="ui button">Сохранить</button>
+
+{{ form_close() }}";s:5:"mtime";i:1684760045;s:6:"markup";s:846:"{##}
+{{ form_ajax('onUpdate', { model: user, class: 'ui form column'} ) }}
+
+<div class="field">
+    <label for="accountName">Логин</label>
+    <input name="name" type="text" id="accountName" value="{{ form_value('name') }}">
+</div>
+
+<div class="field">
+    <label for="accountEmail">Email</label>
+    <input name="email" type="email" id="accountEmail" value="{{ form_value('email') }}">
+</div>
+
+<div class="field">
+    <label for="accountPassword">Новый пароль</label>
+    <input name="password" type="password" id="accountPassword">
+</div>
+
+<div class="field">
+    <label for="accountPasswordConfirm">Подтверждение пароля</label>
+    <input name="password_confirmation" type="password" id="accountPasswordConfirm">
+</div>
+
+<button type="submit" class="ui button">Сохранить</button>
+
+{{ form_close() }}";s:4:"code";N;}}

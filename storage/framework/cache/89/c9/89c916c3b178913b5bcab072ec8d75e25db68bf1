@@ -1,0 +1,48 @@
+1699708128a:1:{s:15:"docx/editor.htm";a:9:{s:8:"fileName";s:15:"docx/editor.htm";s:7:"content";s:706:"title = "Редактор DOCX шаблона"
+url = "/docx/editor"
+layout = "full-width"
+is_hidden = 0
+==
+<html>
+	<head>
+		<meta charset="UTF-8">
+    <script defer src="../themes/bree7e-semantic-theme/assets/js/docx/editor/test.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+		<style>
+      canvas { 
+        width:  100%;
+        height: 100%;
+        margin: 0;
+        border: 1px solid black;  
+      }
+    </style>
+	</head>
+  <body>
+    <div class="parent">
+      <div class="block">
+        <canvas id="canvas" width="1920" height="1080">Ваш браузер устарел</canvas>
+      </div>
+    </div>
+  </body>
+</html>";s:5:"mtime";i:1685526870;s:6:"markup";s:594:"<html>
+	<head>
+		<meta charset="UTF-8">
+    <script defer src="../themes/bree7e-semantic-theme/assets/js/docx/editor/test.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+		<style>
+      canvas { 
+        width:  100%;
+        height: 100%;
+        margin: 0;
+        border: 1px solid black;  
+      }
+    </style>
+	</head>
+  <body>
+    <div class="parent">
+      <div class="block">
+        <canvas id="canvas" width="1920" height="1080">Ваш браузер устарел</canvas>
+      </div>
+    </div>
+  </body>
+</html>";s:4:"code";N;s:5:"title";s:36:"Редактор DOCX шаблона";s:3:"url";s:12:"/docx/editor";s:6:"layout";s:10:"full-width";s:9:"is_hidden";s:1:"0";}}

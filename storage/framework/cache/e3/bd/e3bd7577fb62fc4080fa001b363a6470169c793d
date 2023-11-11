@@ -1,0 +1,37 @@
+1699593701a:1:{s:16:"report-list.yaml";a:7:{s:8:"fileName";s:16:"report-list.yaml";s:7:"content";s:863:"name: Отчёты
+items:
+    -
+        title: 'Публикационная активность'
+        type: cms-page
+        code: ''
+        reference: reports/wsr
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: 'Годовые отчёты'
+        nesting: ''
+        type: cms-page
+        url: ''
+        code: ''
+        reference: reports/year
+        cmsPage: ''
+        replace: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: 'Формы сотрудников'
+        nesting: ''
+        type: cms-page
+        url: ''
+        code: ''
+        reference: reports/form33
+        cmsPage: ''
+        replace: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'";s:5:"mtime";i:1699515131;s:6:"markup";N;s:4:"code";N;s:4:"name";N;s:5:"items";a:0:{}}}

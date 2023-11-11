@@ -1,0 +1,10 @@
+1699708128a:1:{s:15:"reports/wsr.htm";a:10:{s:8:"fileName";s:15:"reports/wsr.htm";s:7:"content";s:177:"title = "Отчёт WoS/Scopus/РИНЦ по сотрудникам"
+url = "/reports/wsr"
+layout = "full-width"
+is_hidden = 0
+
+[crisReport]
+==
+{##}
+{% component 'crisReport' %}";s:5:"mtime";i:1681131961;s:6:"markup";s:34:"{##}
+{% component 'crisReport' %}";s:4:"code";N;s:5:"title";s:58:"Отчёт WoS/Scopus/РИНЦ по сотрудникам";s:3:"url";s:12:"/reports/wsr";s:6:"layout";s:10:"full-width";s:9:"is_hidden";s:1:"0";s:10:"crisReport";a:0:{}}}

@@ -1,0 +1,9 @@
+1699708128a:1:{s:19:"pages/structure.htm";a:10:{s:8:"fileName";s:19:"pages/structure.htm";s:7:"content";s:159:"title = "Структура"
+url = "/structure"
+layout = "full-width"
+is_hidden = 0
+
+[structure]
+profilePage = "profile/authors"
+==
+{% component 'structure' %}";s:5:"mtime";i:1681131961;s:6:"markup";s:27:"{% component 'structure' %}";s:4:"code";N;s:5:"title";s:18:"Структура";s:3:"url";s:10:"/structure";s:6:"layout";s:10:"full-width";s:9:"is_hidden";s:1:"0";s:9:"structure";a:1:{s:11:"profilePage";s:15:"profile/authors";}}}

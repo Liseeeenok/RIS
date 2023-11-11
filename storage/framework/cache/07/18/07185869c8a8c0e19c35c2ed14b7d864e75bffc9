@@ -1,0 +1,29 @@
+1699708128a:1:{s:26:"account/add-first-step.htm";a:10:{s:8:"fileName";s:26:"account/add-first-step.htm";s:7:"content";s:430:"title = "Добавление публикации"
+url = "/account/publications/add"
+layout = "full-width"
+is_hidden = 0
+
+[publicationForm]
+redirect = "publications/add-second-step"
+==
+{##}
+
+<div class="ui vertical stripe segment">
+    <div class="ui text container">
+    {% component 'publicationForm' %}
+        <h4 class="ui horizontal header divider">
+            <a href="#">Case Studies</a>
+        </h4>
+
+    </div>
+</div>";s:5:"mtime";i:1681131961;s:6:"markup";s:244:"{##}
+
+<div class="ui vertical stripe segment">
+    <div class="ui text container">
+    {% component 'publicationForm' %}
+        <h4 class="ui horizontal header divider">
+            <a href="#">Case Studies</a>
+        </h4>
+
+    </div>
+</div>";s:4:"code";N;s:5:"title";s:41:"Добавление публикации";s:3:"url";s:25:"/account/publications/add";s:6:"layout";s:10:"full-width";s:9:"is_hidden";s:1:"0";s:15:"publicationForm";a:1:{s:8:"redirect";s:28:"publications/add-second-step";}}}

@@ -1,0 +1,26 @@
+1699708128a:1:{s:19:"account/account.htm";a:10:{s:8:"fileName";s:19:"account/account.htm";s:7:"content";s:313:"title = "Аккаунт"
+url = "/account/:code?"
+layout = "text-container"
+is_hidden = 0
+
+[account]
+paramCode = "code"
+forceSecure = 0
+==
+<?php
+public function onEnd()
+{
+    // $this->page->title = "Настройки аккаунта";
+}
+?>
+==
+{##}
+<div class="ui container">
+    {% component 'account' %}
+</div>";s:5:"mtime";i:1681131961;s:6:"markup";s:68:"{##}
+<div class="ui container">
+    {% component 'account' %}
+</div>";s:4:"code";s:94:"public function onEnd()
+{
+    // $this->page->title = "Настройки аккаунта";
+}";s:5:"title";s:14:"Аккаунт";s:3:"url";s:15:"/account/:code?";s:6:"layout";s:14:"text-container";s:9:"is_hidden";s:1:"0";s:7:"account";a:2:{s:9:"paramCode";s:4:"code";s:11:"forceSecure";s:1:"0";}}}

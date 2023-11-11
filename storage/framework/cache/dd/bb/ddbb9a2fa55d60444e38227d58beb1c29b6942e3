@@ -1,0 +1,52 @@
+1697110686a:1:{s:18:"account/signin.htm";a:5:{s:8:"fileName";s:18:"account/signin.htm";s:7:"content";s:753:"{##}
+<form
+    class="ui form"
+    data-request="onSignin">
+    <div class="field">
+        <label for="userSigninLogin">{{ loginAttributeLabel }}</label>
+        <input
+            name="login"
+            type="text"
+            class="form-control"
+            id="userSigninLogin"
+            placeholder="Введите ваш {{ loginAttributeLabel|lower }}" />
+    </div>
+
+    <div class="field">
+        <label for="userSigninPassword">Пароль</label>
+        <input
+            name="password"
+            type="password"
+            class="form-control"
+            id="userSigninPassword"
+            placeholder="Введите ваш пароль" />
+    </div>
+
+    <button type="submit" class="ui button">Войти</button>
+</form>
+";s:5:"mtime";i:1681131961;s:6:"markup";s:752:"{##}
+<form
+    class="ui form"
+    data-request="onSignin">
+    <div class="field">
+        <label for="userSigninLogin">{{ loginAttributeLabel }}</label>
+        <input
+            name="login"
+            type="text"
+            class="form-control"
+            id="userSigninLogin"
+            placeholder="Введите ваш {{ loginAttributeLabel|lower }}" />
+    </div>
+
+    <div class="field">
+        <label for="userSigninPassword">Пароль</label>
+        <input
+            name="password"
+            type="password"
+            class="form-control"
+            id="userSigninPassword"
+            placeholder="Введите ваш пароль" />
+    </div>
+
+    <button type="submit" class="ui button">Войти</button>
+</form>";s:4:"code";N;}}

@@ -1,0 +1,8 @@
+1699708128a:1:{s:23:"publications/search.htm";a:10:{s:8:"fileName";s:23:"publications/search.htm";s:7:"content";s:166:"title = "Поиск публикаций"
+url = "/publications/search"
+layout = "full-width"
+is_hidden = 0
+
+[publicationSearch]
+==
+{% component 'publicationSearch' %}";s:5:"mtime";i:1681905336;s:6:"markup";s:35:"{% component 'publicationSearch' %}";s:4:"code";N;s:5:"title";s:31:"Поиск публикаций";s:3:"url";s:20:"/publications/search";s:6:"layout";s:10:"full-width";s:9:"is_hidden";s:1:"0";s:17:"publicationSearch";a:0:{}}}

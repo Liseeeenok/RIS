@@ -1,0 +1,14 @@
+1699708128a:1:{s:7:"404.htm";a:9:{s:8:"fileName";s:7:"404.htm";s:7:"content";s:370:"title = "404 Страница не найдена"
+url = "/404"
+layout = "no-container"
+is_hidden = 0
+==
+{##}
+<div class="ui container" style="padding-top: 8rem;padding-bottom: 38rem;">
+    <h1 class="ui header" style="font-size: 4rem;">404 Страница не найдена</h1>
+    <p>Кажется, такой страницы не существует</p>
+</div>";s:5:"mtime";i:1681131935;s:6:"markup";s:265:"{##}
+<div class="ui container" style="padding-top: 8rem;padding-bottom: 38rem;">
+    <h1 class="ui header" style="font-size: 4rem;">404 Страница не найдена</h1>
+    <p>Кажется, такой страницы не существует</p>
+</div>";s:4:"code";N;s:5:"title";s:40:"404 Страница не найдена";s:3:"url";s:4:"/404";s:6:"layout";s:12:"no-container";s:9:"is_hidden";s:1:"0";}}
