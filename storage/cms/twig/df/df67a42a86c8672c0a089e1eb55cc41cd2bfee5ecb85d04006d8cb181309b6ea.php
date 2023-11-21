@@ -136,6 +136,21 @@ class __TwigTemplate_faed41cd542e8436b0d3e2d40de39281b6351ce0a1e4ff0fd02d2a5b269
             </div>
         </div>
     </div>
+    <div class=\"grouped fields\">
+        <label for=\"pub-type\">Коэффициенты расчёта</label>
+        <div class=\"field\">
+            <div class=\"ui radio checkbox\">
+                <input type=\"radio\" name=\"pub-type\" checked value=\"wos\" class=\"hidden\">
+                <label>Считать по WoS/Scopus</label>
+            </div>
+        </div>
+        <div class=\"field\">
+            <div class=\"ui radio checkbox\">
+                <input type=\"radio\" name=\"pub-type\" value=\"ubs\" class=\"hidden\">
+                <label>Считать по УБС</label>
+            </div>
+        </div>
+    </div>
     <h4 class=\"ui dividing header\">Коэффициенты</h4>
     <div class=\"fields\">
         <div class=\"field\">
@@ -175,6 +190,24 @@ class __TwigTemplate_faed41cd542e8436b0d3e2d40de39281b6351ce0a1e4ff0fd02d2a5b269
     </div>
     <div class=\"fields\">
         <div class=\"field\">
+            <label>Статьи УБС1</label>
+            <input name=\"art-ubs-q1\" type=\"number\" value=\"10\" min=\"0\" max=\"100\" step=\"0.05\">
+        </div>
+        <div class=\"field\">
+            <label>Статьи УБС2</label>
+            <input name=\"art-ubs-q2\" type=\"number\" value=\"5\" min=\"0\" max=\"100\" step=\"0.05\">
+        </div>
+        <div class=\"field\">
+            <label>Статьи УБС3</label>
+            <input name=\"art-ubs-q3\" type=\"number\" value=\"2.5\" min=\"0\" max=\"100\" step=\"0.05\">
+        </div>
+        <div class=\"field\">
+            <label>Статьи УБС4</label>
+            <input name=\"art-ubs-q4\" type=\"number\" value=\"1\" min=\"0\" max=\"100\" step=\"0.05\">
+        </div>
+    </div>
+    <div class=\"fields\">
+        <div class=\"field\">
             <label>Статьи Wos ESCI</label>
             <input name=\"art-wos-q5\" type=\"number\" value=\"1\" min=\"0\" max=\"100\" step=\"0.05\">
         </div>
@@ -195,6 +228,10 @@ class __TwigTemplate_faed41cd542e8436b0d3e2d40de39281b6351ce0a1e4ff0fd02d2a5b269
         <div class=\"field\">
             <label>Труды Scopus</label>
             <input name=\"proc-scopus\" type=\"number\" value=\"1\" min=\"0\" max=\"100\" step=\"0.05\">
+        </div>
+        <div class=\"field\">
+            <label>Труды УБС</label>
+            <input name=\"proc-ubs\" type=\"number\" value=\"0.1\" min=\"0\" max=\"100\" step=\"0.05\">
         </div>
         <div class=\"field\">
             <label>Труды РИНЦ</label>
@@ -317,6 +354,21 @@ class __TwigTemplate_faed41cd542e8436b0d3e2d40de39281b6351ce0a1e4ff0fd02d2a5b269
             </div>
         </div>
     </div>
+    <div class=\"grouped fields\">
+        <label for=\"pub-type\">Коэффициенты расчёта</label>
+        <div class=\"field\">
+            <div class=\"ui radio checkbox\">
+                <input type=\"radio\" name=\"pub-type\" checked value=\"wos\" class=\"hidden\">
+                <label>Считать по WoS/Scopus</label>
+            </div>
+        </div>
+        <div class=\"field\">
+            <div class=\"ui radio checkbox\">
+                <input type=\"radio\" name=\"pub-type\" value=\"ubs\" class=\"hidden\">
+                <label>Считать по УБС</label>
+            </div>
+        </div>
+    </div>
     <h4 class=\"ui dividing header\">Коэффициенты</h4>
     <div class=\"fields\">
         <div class=\"field\">
@@ -356,6 +408,24 @@ class __TwigTemplate_faed41cd542e8436b0d3e2d40de39281b6351ce0a1e4ff0fd02d2a5b269
     </div>
     <div class=\"fields\">
         <div class=\"field\">
+            <label>Статьи УБС1</label>
+            <input name=\"art-ubs-q1\" type=\"number\" value=\"10\" min=\"0\" max=\"100\" step=\"0.05\">
+        </div>
+        <div class=\"field\">
+            <label>Статьи УБС2</label>
+            <input name=\"art-ubs-q2\" type=\"number\" value=\"5\" min=\"0\" max=\"100\" step=\"0.05\">
+        </div>
+        <div class=\"field\">
+            <label>Статьи УБС3</label>
+            <input name=\"art-ubs-q3\" type=\"number\" value=\"2.5\" min=\"0\" max=\"100\" step=\"0.05\">
+        </div>
+        <div class=\"field\">
+            <label>Статьи УБС4</label>
+            <input name=\"art-ubs-q4\" type=\"number\" value=\"1\" min=\"0\" max=\"100\" step=\"0.05\">
+        </div>
+    </div>
+    <div class=\"fields\">
+        <div class=\"field\">
             <label>Статьи Wos ESCI</label>
             <input name=\"art-wos-q5\" type=\"number\" value=\"1\" min=\"0\" max=\"100\" step=\"0.05\">
         </div>
@@ -376,6 +446,10 @@ class __TwigTemplate_faed41cd542e8436b0d3e2d40de39281b6351ce0a1e4ff0fd02d2a5b269
         <div class=\"field\">
             <label>Труды Scopus</label>
             <input name=\"proc-scopus\" type=\"number\" value=\"1\" min=\"0\" max=\"100\" step=\"0.05\">
+        </div>
+        <div class=\"field\">
+            <label>Труды УБС</label>
+            <input name=\"proc-ubs\" type=\"number\" value=\"0.1\" min=\"0\" max=\"100\" step=\"0.05\">
         </div>
         <div class=\"field\">
             <label>Труды РИНЦ</label>

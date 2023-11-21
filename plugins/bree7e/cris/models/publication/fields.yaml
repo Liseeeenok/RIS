@@ -66,15 +66,6 @@ fields:
         list: $/bree7e/cris/models/author/columns.yaml
         span: left
         type: recordfinder
-    speaker2:
-        label: Докладчик 2 Версия
-        span: left
-        placeholder: ''
-        default: ''
-        disabled: 0
-        required: 1
-        type: text
-        comment: 'Фамилия автора с инициалами'
     report_type:
         label: Тип доклада
         span: left
@@ -287,14 +278,6 @@ fields:
             field: publicationtype
             condition: 'value[1][2]'
         type: section
-    is_wos:
-        label: 'Web of Science'
-        span: left
-        trigger:
-            action: show
-            field: publicationtype
-            condition: 'value[1][2]'
-        type: checkbox
     quartile:
         label: 'Квартиль Web of Science'
         oc.commentPosition: ''
@@ -310,6 +293,14 @@ fields:
             field: is_wos
             condition: checked
         type: radio
+    is_wos:
+        label: 'Web of Science'
+        span: left
+        trigger:
+            action: show
+            field: publicationtype
+            condition: 'value[1][2]'
+        type: checkbox
     quartile_scopus:
         label: 'Квартиль Scopus'
         oc.commentPosition: ''
@@ -333,7 +324,28 @@ fields:
             field: publicationtype
             condition: 'value[1][2]'
         type: checkbox
-    
+    quartile_wl:
+        label: 'Уровни белого списка'
+        oc.commentPosition: ''
+        options:
+            УБС1: УБС1
+            УБС2: УБС2
+            УБС3: УБС3
+            УБС4: УБС4
+        span: right 
+        trigger:
+            action: show
+            field: is_wl
+            condition: checked
+        type: radio
+    is_wl:
+        label: Белый список
+        span: left
+        trigger:
+            action: show
+            field: publicationtype
+            condition: 'value[1][2]'
+        type: checkbox
     is_risc:
         label: РИНЦ
         span: left

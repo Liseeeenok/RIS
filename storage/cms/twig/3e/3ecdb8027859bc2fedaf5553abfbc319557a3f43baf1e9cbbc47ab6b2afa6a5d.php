@@ -141,7 +141,27 @@ class __TwigTemplate_e49cdc7230afd12d1a02029287793c1f722d544249fc10e75a53229448c
 ";
         }
         // line 31
-        echo "    ";
+        echo "
+";
+        // line 32
+        if (twig_get_attribute($this->env, $this->source, ($context["publication"] ?? null), "number_projects", [], "any", false, false, false, 32)) {
+            // line 33
+            echo "    Проекты: 
+";
+        }
+        // line 35
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, ($context["publication"] ?? null), "number_projects", [], "any", false, false, false, 35));
+        foreach ($context['_seq'] as $context["_key"] => $context["p"]) {
+            // line 36
+            echo "    ";
+            echo twig_escape_filter($this->env, $context["p"], "html", null, true);
+            echo "
+";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['p'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
     }
 
     public function getTemplateName()
@@ -156,7 +176,7 @@ class __TwigTemplate_e49cdc7230afd12d1a02029287793c1f722d544249fc10e75a53229448c
 
     public function getDebugInfo()
     {
-        return array (  144 => 31,  138 => 29,  136 => 28,  124 => 26,  114 => 24,  112 => 23,  99 => 22,  97 => 21,  89 => 20,  81 => 19,  79 => 18,  76 => 16,  74 => 15,  72 => 14,  70 => 13,  68 => 12,  59 => 11,  57 => 10,  54 => 9,  50 => 7,  47 => 6,  45 => 5,  42 => 4,  39 => 3,  37 => 2,);
+        return array (  157 => 36,  153 => 35,  149 => 33,  147 => 32,  144 => 31,  138 => 29,  136 => 28,  124 => 26,  114 => 24,  112 => 23,  99 => 22,  97 => 21,  89 => 20,  81 => 19,  79 => 18,  76 => 16,  74 => 15,  72 => 14,  70 => 13,  68 => 12,  59 => 11,  57 => 10,  54 => 9,  50 => 7,  47 => 6,  45 => 5,  42 => 4,  39 => 3,  37 => 2,);
     }
 
     public function getSourceContext()
@@ -191,6 +211,12 @@ class __TwigTemplate_e49cdc7230afd12d1a02029287793c1f722d544249fc10e75a53229448c
 {% if showIndextion and publication.best_indexation != '-' %}
     ({{ publication.best_indexation }})
 {% endif %}
-    ", "/var/www/ris/plugins/bree7e/cris/components/partials/publication.htm", "");
+
+{% if publication.number_projects %}
+    Проекты: 
+{% endif %}
+{% for p in publication.number_projects %}
+    {{ p }}
+{% endfor %}", "/var/www/ris/plugins/bree7e/cris/components/partials/publication.htm", "");
     }
 }

@@ -62,6 +62,12 @@ class Project extends Model
             'Bree7e\Cris\Models\Publication',
             'table' => 'bree7e_cris_projects_publications'
         ],
+        'project_authors' => [
+            'Bree7e\Cris\Models\Author',
+            'table' => 'bree7e_cris_authors_projects', // таблица многие-ко-многим
+            'key' => 'project_id', // The key parameter is the foreign key name of the model on which you are defining the relationship
+            'otherKey' => 'rb_author_id' // Second foreign key name in the many-to-many table
+        ]
     ];
     public $morphTo = [];
     public $morphOne = [];

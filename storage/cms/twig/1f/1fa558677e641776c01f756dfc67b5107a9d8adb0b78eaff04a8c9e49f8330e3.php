@@ -42,7 +42,7 @@ class __TwigTemplate_a338380c1e7ab9bffcc9256d7bc3910d3ede110ac7099d0411d34a5ad55
         <thead>
             <tr>
                 <th rowspan=\"2\" class=\"left aligned\">Фамилия</th>
-                <th colspan=\"11\">Статьи</th>
+                <th colspan=\"15\">Статьи</th>
                 <th colspan=\"3\">Труды конференций</th>
                 <th rowspan=\"2\">Монографии</th>
                 <th rowspan=\"2\">Свидетельства</th>
@@ -59,6 +59,10 @@ class __TwigTemplate_a338380c1e7ab9bffcc9256d7bc3910d3ede110ac7099d0411d34a5ad55
                 <th>Scopus Q3</th>
                 <th>Scopus Q4</th>
                 <th>Scopus ESCI</th>
+                <th>УБС1</th>
+                <th>УБС2</th>
+                <th>УБС3</th>
+                <th>УБС4</th>
                 <th>РИНЦ</th>
                 <th>Wos</th>
                 <th>Scopus</th>
@@ -67,107 +71,123 @@ class __TwigTemplate_a338380c1e7ab9bffcc9256d7bc3910d3ede110ac7099d0411d34a5ad55
         </thead>
         <tbody>
             ";
-        // line 33
+        // line 37
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable(($context["departments"] ?? null));
         foreach ($context['_seq'] as $context["_key"] => $context["department"]) {
-            // line 34
+            // line 38
             echo "            ";
-            if (twig_get_attribute($this->env, $this->source, $context["department"], "workers", [], "any", false, false, false, 34)) {
-                // line 35
+            if (twig_get_attribute($this->env, $this->source, $context["department"], "workers", [], "any", false, false, false, 38)) {
+                // line 39
                 echo "            <tr>
                 <th colspan=\"18\">";
-                // line 36
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["department"], "name", [], "any", false, false, false, 36), "html", null, true);
+                // line 40
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["department"], "name", [], "any", false, false, false, 40), "html", null, true);
                 echo "</th>
             </tr>
             ";
-                // line 38
+                // line 42
                 $context['_parent'] = $context;
-                $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, $context["department"], "workers", [], "any", false, false, false, 38));
+                $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, $context["department"], "workers", [], "any", false, false, false, 42));
                 foreach ($context['_seq'] as $context["_key"] => $context["author"]) {
-                    // line 39
+                    // line 43
                     echo "            <tr data-user-id=\"";
-                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["author"], "id", [], "any", false, false, false, 39), "html", null, true);
+                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["author"], "id", [], "any", false, false, false, 43), "html", null, true);
                     echo "\">
                 <td class=\"left aligned\">
                     ";
-                    // line 41
-                    echo twig_escape_filter($this->env, (((((twig_get_attribute($this->env, $this->source, $context["author"], "surname", [], "any", false, false, false, 41) . " ") . twig_first($this->env, twig_get_attribute($this->env, $this->source, $context["author"], "name", [], "any", false, false, false, 41))) . ".") . twig_first($this->env, twig_get_attribute($this->env, $this->source, $context["author"], "middlename", [], "any", false, false, false, 41))) . "."), "html", null, true);
+                    // line 45
+                    echo twig_escape_filter($this->env, (((((twig_get_attribute($this->env, $this->source, $context["author"], "surname", [], "any", false, false, false, 45) . " ") . twig_first($this->env, twig_get_attribute($this->env, $this->source, $context["author"], "name", [], "any", false, false, false, 45))) . ".") . twig_first($this->env, twig_get_attribute($this->env, $this->source, $context["author"], "middlename", [], "any", false, false, false, 45))) . "."), "html", null, true);
                     echo "
                     ";
-                    // line 42
-                    echo ((twig_get_attribute($this->env, $this->source, $context["author"], "hasExcepted", [], "any", false, false, false, 42)) ? (" (Не учитывается)") : (""));
+                    // line 46
+                    echo ((twig_get_attribute($this->env, $this->source, $context["author"], "hasExcepted", [], "any", false, false, false, 46)) ? (" (Не учитывается)") : (""));
                     echo "
                 </td> <!--Фамилии-->
                 <td>";
-                    // line 44
-                    ((twig_get_attribute($this->env, $this->source, $context["author"], "artWosQ1Total", [], "any", false, false, false, 44)) ? (print (twig_escape_filter($this->env, twig_number_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["author"], "artWosQ1Total", [], "any", false, false, false, 44), 2, ","), "html", null, true))) : (print ("")));
+                    // line 48
+                    ((twig_get_attribute($this->env, $this->source, $context["author"], "artWosQ1Total", [], "any", false, false, false, 48)) ? (print (twig_escape_filter($this->env, twig_number_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["author"], "artWosQ1Total", [], "any", false, false, false, 48), 2, ","), "html", null, true))) : (print ("")));
                     echo "</td> <!--WOS Q1-->
                 <td>";
-                    // line 45
-                    ((twig_get_attribute($this->env, $this->source, $context["author"], "artWosQ2Total", [], "any", false, false, false, 45)) ? (print (twig_escape_filter($this->env, twig_number_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["author"], "artWosQ2Total", [], "any", false, false, false, 45), 2, ","), "html", null, true))) : (print ("")));
+                    // line 49
+                    ((twig_get_attribute($this->env, $this->source, $context["author"], "artWosQ2Total", [], "any", false, false, false, 49)) ? (print (twig_escape_filter($this->env, twig_number_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["author"], "artWosQ2Total", [], "any", false, false, false, 49), 2, ","), "html", null, true))) : (print ("")));
                     echo "</td> <!--WOS Q2-->
                 <td>";
-                    // line 46
-                    ((twig_get_attribute($this->env, $this->source, $context["author"], "artWosQ3Total", [], "any", false, false, false, 46)) ? (print (twig_escape_filter($this->env, twig_number_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["author"], "artWosQ3Total", [], "any", false, false, false, 46), 2, ","), "html", null, true))) : (print ("")));
+                    // line 50
+                    ((twig_get_attribute($this->env, $this->source, $context["author"], "artWosQ3Total", [], "any", false, false, false, 50)) ? (print (twig_escape_filter($this->env, twig_number_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["author"], "artWosQ3Total", [], "any", false, false, false, 50), 2, ","), "html", null, true))) : (print ("")));
                     echo "</td> <!--WOS Q3-->
                 <td>";
-                    // line 47
-                    ((twig_get_attribute($this->env, $this->source, $context["author"], "artWosQ4Total", [], "any", false, false, false, 47)) ? (print (twig_escape_filter($this->env, twig_number_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["author"], "artWosQ4Total", [], "any", false, false, false, 47), 2, ","), "html", null, true))) : (print ("")));
+                    // line 51
+                    ((twig_get_attribute($this->env, $this->source, $context["author"], "artWosQ4Total", [], "any", false, false, false, 51)) ? (print (twig_escape_filter($this->env, twig_number_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["author"], "artWosQ4Total", [], "any", false, false, false, 51), 2, ","), "html", null, true))) : (print ("")));
                     echo "</td> <!--WOS Q4-->
                 <td>";
-                    // line 48
-                    ((twig_get_attribute($this->env, $this->source, $context["author"], "artWosQ5Total", [], "any", false, false, false, 48)) ? (print (twig_escape_filter($this->env, twig_number_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["author"], "artWosQ5Total", [], "any", false, false, false, 48), 2, ","), "html", null, true))) : (print ("")));
+                    // line 52
+                    ((twig_get_attribute($this->env, $this->source, $context["author"], "artWosQ5Total", [], "any", false, false, false, 52)) ? (print (twig_escape_filter($this->env, twig_number_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["author"], "artWosQ5Total", [], "any", false, false, false, 52), 2, ","), "html", null, true))) : (print ("")));
                     echo "</td> <!--WOS ESCI-->
                 <td>";
-                    // line 49
-                    ((twig_get_attribute($this->env, $this->source, $context["author"], "artScopusQ1Total", [], "any", false, false, false, 49)) ? (print (twig_escape_filter($this->env, twig_number_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["author"], "artScopusQ1Total", [], "any", false, false, false, 49), 2, ","), "html", null, true))) : (print ("")));
+                    // line 53
+                    ((twig_get_attribute($this->env, $this->source, $context["author"], "artScopusQ1Total", [], "any", false, false, false, 53)) ? (print (twig_escape_filter($this->env, twig_number_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["author"], "artScopusQ1Total", [], "any", false, false, false, 53), 2, ","), "html", null, true))) : (print ("")));
                     echo "</td> <!--Scopus Q1-->
                 <td>";
-                    // line 50
-                    ((twig_get_attribute($this->env, $this->source, $context["author"], "artScopusQ2Total", [], "any", false, false, false, 50)) ? (print (twig_escape_filter($this->env, twig_number_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["author"], "artScopusQ2Total", [], "any", false, false, false, 50), 2, ","), "html", null, true))) : (print ("")));
+                    // line 54
+                    ((twig_get_attribute($this->env, $this->source, $context["author"], "artScopusQ2Total", [], "any", false, false, false, 54)) ? (print (twig_escape_filter($this->env, twig_number_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["author"], "artScopusQ2Total", [], "any", false, false, false, 54), 2, ","), "html", null, true))) : (print ("")));
                     echo "</td> <!--Scopus Q2-->
                 <td>";
-                    // line 51
-                    ((twig_get_attribute($this->env, $this->source, $context["author"], "artScopusQ3Total", [], "any", false, false, false, 51)) ? (print (twig_escape_filter($this->env, twig_number_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["author"], "artScopusQ3Total", [], "any", false, false, false, 51), 2, ","), "html", null, true))) : (print ("")));
+                    // line 55
+                    ((twig_get_attribute($this->env, $this->source, $context["author"], "artScopusQ3Total", [], "any", false, false, false, 55)) ? (print (twig_escape_filter($this->env, twig_number_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["author"], "artScopusQ3Total", [], "any", false, false, false, 55), 2, ","), "html", null, true))) : (print ("")));
                     echo "</td> <!--Scopus Q3-->
                 <td>";
-                    // line 52
-                    ((twig_get_attribute($this->env, $this->source, $context["author"], "artScopusQ4Total", [], "any", false, false, false, 52)) ? (print (twig_escape_filter($this->env, twig_number_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["author"], "artScopusQ4Total", [], "any", false, false, false, 52), 2, ","), "html", null, true))) : (print ("")));
+                    // line 56
+                    ((twig_get_attribute($this->env, $this->source, $context["author"], "artScopusQ4Total", [], "any", false, false, false, 56)) ? (print (twig_escape_filter($this->env, twig_number_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["author"], "artScopusQ4Total", [], "any", false, false, false, 56), 2, ","), "html", null, true))) : (print ("")));
                     echo "</td> <!--Scopus Q4-->
                 <td>";
-                    // line 53
-                    ((twig_get_attribute($this->env, $this->source, $context["author"], "artScopusQ5Total", [], "any", false, false, false, 53)) ? (print (twig_escape_filter($this->env, twig_number_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["author"], "artScopusQ5Total", [], "any", false, false, false, 53), 2, ","), "html", null, true))) : (print ("")));
+                    // line 57
+                    ((twig_get_attribute($this->env, $this->source, $context["author"], "artScopusQ5Total", [], "any", false, false, false, 57)) ? (print (twig_escape_filter($this->env, twig_number_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["author"], "artScopusQ5Total", [], "any", false, false, false, 57), 2, ","), "html", null, true))) : (print ("")));
                     echo "</td>
                 <!--Scopus ESCI-->
                 <td>";
-                    // line 55
-                    ((twig_get_attribute($this->env, $this->source, $context["author"], "artRiscTotal", [], "any", false, false, false, 55)) ? (print (twig_escape_filter($this->env, twig_number_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["author"], "artRiscTotal", [], "any", false, false, false, 55), 2, ","), "html", null, true))) : (print ("")));
-                    echo "</td> <!--РИНЦ-->
-                <td>";
-                    // line 56
-                    ((twig_get_attribute($this->env, $this->source, $context["author"], "procWosTotal", [], "any", false, false, false, 56)) ? (print (twig_escape_filter($this->env, twig_number_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["author"], "procWosTotal", [], "any", false, false, false, 56), 2, ","), "html", null, true))) : (print ("")));
-                    echo "</td> <!--Wos-->
-                <td>";
-                    // line 57
-                    ((twig_get_attribute($this->env, $this->source, $context["author"], "procScopusTotal", [], "any", false, false, false, 57)) ? (print (twig_escape_filter($this->env, twig_number_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["author"], "procScopusTotal", [], "any", false, false, false, 57), 2, ","), "html", null, true))) : (print ("")));
-                    echo "</td> <!--Scopus-->
-                <td>";
-                    // line 58
-                    ((twig_get_attribute($this->env, $this->source, $context["author"], "procRiscTotal", [], "any", false, false, false, 58)) ? (print (twig_escape_filter($this->env, twig_number_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["author"], "procRiscTotal", [], "any", false, false, false, 58), 2, ","), "html", null, true))) : (print ("")));
-                    echo "</td> <!--РИНЦ-->
-                <td>";
                     // line 59
-                    ((twig_get_attribute($this->env, $this->source, $context["author"], "bookTotal", [], "any", false, false, false, 59)) ? (print (twig_escape_filter($this->env, twig_number_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["author"], "bookTotal", [], "any", false, false, false, 59), 2, ","), "html", null, true))) : (print ("")));
-                    echo "</td> <!--Монографии-->
+                    ((twig_get_attribute($this->env, $this->source, $context["author"], "artUBS1Total", [], "any", false, false, false, 59)) ? (print (twig_escape_filter($this->env, twig_number_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["author"], "artUBS1Total", [], "any", false, false, false, 59), 2, ","), "html", null, true))) : (print ("")));
+                    echo "</td> <!--УБС1-->
                 <td>";
                     // line 60
-                    ((twig_get_attribute($this->env, $this->source, $context["author"], "patentTotal", [], "any", false, false, false, 60)) ? (print (twig_escape_filter($this->env, twig_number_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["author"], "patentTotal", [], "any", false, false, false, 60), 2, ","), "html", null, true))) : (print ("")));
-                    echo "</td> <!--Свидетельства-->
+                    ((twig_get_attribute($this->env, $this->source, $context["author"], "artUBS2Total", [], "any", false, false, false, 60)) ? (print (twig_escape_filter($this->env, twig_number_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["author"], "artUBS2Total", [], "any", false, false, false, 60), 2, ","), "html", null, true))) : (print ("")));
+                    echo "</td> <!--УБС2-->
                 <td>";
                     // line 61
-                    ((twig_get_attribute($this->env, $this->source, $context["author"], "total", [], "any", false, false, false, 61)) ? (print (twig_escape_filter($this->env, twig_number_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["author"], "total", [], "any", false, false, false, 61), 2, ","), "html", null, true))) : (print (0)));
+                    ((twig_get_attribute($this->env, $this->source, $context["author"], "artUBS3Total", [], "any", false, false, false, 61)) ? (print (twig_escape_filter($this->env, twig_number_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["author"], "artUBS3Total", [], "any", false, false, false, 61), 2, ","), "html", null, true))) : (print ("")));
+                    echo "</td> <!--УБС3-->
+                <td>";
+                    // line 62
+                    ((twig_get_attribute($this->env, $this->source, $context["author"], "artUBS4Total", [], "any", false, false, false, 62)) ? (print (twig_escape_filter($this->env, twig_number_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["author"], "artUBS4Total", [], "any", false, false, false, 62), 2, ","), "html", null, true))) : (print ("")));
+                    echo "</td> <!--УБС4-->
+                <td>";
+                    // line 63
+                    ((twig_get_attribute($this->env, $this->source, $context["author"], "artRiscTotal", [], "any", false, false, false, 63)) ? (print (twig_escape_filter($this->env, twig_number_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["author"], "artRiscTotal", [], "any", false, false, false, 63), 2, ","), "html", null, true))) : (print ("")));
+                    echo "</td> <!--РИНЦ-->
+                <td>";
+                    // line 64
+                    ((twig_get_attribute($this->env, $this->source, $context["author"], "procWosTotal", [], "any", false, false, false, 64)) ? (print (twig_escape_filter($this->env, twig_number_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["author"], "procWosTotal", [], "any", false, false, false, 64), 2, ","), "html", null, true))) : (print ("")));
+                    echo "</td> <!--Wos-->
+                <td>";
+                    // line 65
+                    ((twig_get_attribute($this->env, $this->source, $context["author"], "procScopusTotal", [], "any", false, false, false, 65)) ? (print (twig_escape_filter($this->env, twig_number_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["author"], "procScopusTotal", [], "any", false, false, false, 65), 2, ","), "html", null, true))) : (print ("")));
+                    echo "</td> <!--Scopus-->
+                <td>";
+                    // line 66
+                    ((twig_get_attribute($this->env, $this->source, $context["author"], "procRiscTotal", [], "any", false, false, false, 66)) ? (print (twig_escape_filter($this->env, twig_number_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["author"], "procRiscTotal", [], "any", false, false, false, 66), 2, ","), "html", null, true))) : (print ("")));
+                    echo "</td> <!--РИНЦ-->
+                <td>";
+                    // line 67
+                    ((twig_get_attribute($this->env, $this->source, $context["author"], "bookTotal", [], "any", false, false, false, 67)) ? (print (twig_escape_filter($this->env, twig_number_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["author"], "bookTotal", [], "any", false, false, false, 67), 2, ","), "html", null, true))) : (print ("")));
+                    echo "</td> <!--Монографии-->
+                <td>";
+                    // line 68
+                    ((twig_get_attribute($this->env, $this->source, $context["author"], "patentTotal", [], "any", false, false, false, 68)) ? (print (twig_escape_filter($this->env, twig_number_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["author"], "patentTotal", [], "any", false, false, false, 68), 2, ","), "html", null, true))) : (print ("")));
+                    echo "</td> <!--Свидетельства-->
+                <td>";
+                    // line 69
+                    ((twig_get_attribute($this->env, $this->source, $context["author"], "total", [], "any", false, false, false, 69)) ? (print (twig_escape_filter($this->env, twig_number_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["author"], "total", [], "any", false, false, false, 69), 2, ","), "html", null, true))) : (print (0)));
                     echo "</td> <!--ИТОГО-->
             </tr>
             ";
@@ -175,92 +195,92 @@ class __TwigTemplate_a338380c1e7ab9bffcc9256d7bc3910d3ede110ac7099d0411d34a5ad55
                 $_parent = $context['_parent'];
                 unset($context['_seq'], $context['_iterated'], $context['_key'], $context['author'], $context['_parent'], $context['loop']);
                 $context = array_intersect_key($context, $_parent) + $_parent;
-                // line 64
+                // line 72
                 echo "            ";
             }
-            // line 65
+            // line 73
             echo "            ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['department'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 66
+        // line 74
         echo "        </tbody>
     </table>
 </div>
 
 ";
-        // line 70
-        $context["publications"] = twig_get_attribute($this->env, $this->source, ($context["__SELF__"] ?? null), "publications", [], "any", false, false, false, 70);
-        // line 71
+        // line 78
+        $context["publications"] = twig_get_attribute($this->env, $this->source, ($context["__SELF__"] ?? null), "publications", [], "any", false, false, false, 78);
+        // line 79
         if (($context["publications"] ?? null)) {
-            // line 72
+            // line 80
             echo "<div class=\"ui vertical segment\">
     <h2>Список публикаций, участвующих в отчёте</h2>
     <ol class=\"ui list\">
         ";
-            // line 75
+            // line 83
             $context['_parent'] = $context;
             $context['_seq'] = twig_ensure_traversable(($context["publications"] ?? null));
             foreach ($context['_seq'] as $context["_key"] => $context["p"]) {
-                // line 76
+                // line 84
                 echo "        <li>
             ";
-                // line 77
-                echo twig_escape_filter($this->env, ((((twig_number_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["p"], "k", [], "any", false, false, false, 77), 2, ",") . "/") . twig_get_attribute($this->env, $this->source, $context["p"], "countAuthor", [], "any", false, false, false, 77)) . "=") . twig_number_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["p"], "dividedK", [], "any", false, false, false, 77), 2, ",")), "html", null, true);
+                // line 85
+                echo twig_escape_filter($this->env, ((((twig_number_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["p"], "k", [], "any", false, false, false, 85), 2, ",") . "/") . twig_get_attribute($this->env, $this->source, $context["p"], "countAuthor", [], "any", false, false, false, 85)) . "=") . twig_number_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["p"], "dividedK", [], "any", false, false, false, 85), 2, ",")), "html", null, true);
                 echo "
             ";
-                // line 79
+                // line 87
                 echo "            - ";
                 $context['__cms_partial_params'] = [];
                 $context['__cms_partial_params']['publication'] = $context["p"]                ;
                 $context['__cms_partial_params']['showIndextion'] = true                ;
                 echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("@publication"                , $context['__cms_partial_params']                , true                );
                 unset($context['__cms_partial_params']);
-                // line 80
+                // line 88
                 echo "            ";
-                if (twig_get_attribute($this->env, $this->source, $context["p"], "hasTranslatedVersion", [], "any", false, false, false, 80)) {
-                    // line 81
+                if (twig_get_attribute($this->env, $this->source, $context["p"], "hasTranslatedVersion", [], "any", false, false, false, 88)) {
+                    // line 89
                     echo "            <span style=\"color: orange;\">(Есть перевод:
                 ";
-                    // line 82
-                    echo twig_escape_filter($this->env, (((((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["p"], "translated_version", [], "any", false, false, false, 82), "authors", [], "any", false, false, false, 82) . " ") . twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["p"], "translated_version", [], "any", false, false, false, 82), "title", [], "any", false, false, false, 82)) . ".") . twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["p"], "translated_version", [], "any", false, false, false, 82), "year", [], "any", false, false, false, 82)) . "."), "html", null, true);
-                    // line 83
+                    // line 90
+                    echo twig_escape_filter($this->env, (((((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["p"], "translated_version", [], "any", false, false, false, 90), "authors", [], "any", false, false, false, 90) . " ") . twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["p"], "translated_version", [], "any", false, false, false, 90), "title", [], "any", false, false, false, 90)) . ".") . twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["p"], "translated_version", [], "any", false, false, false, 90), "year", [], "any", false, false, false, 90)) . "."), "html", null, true);
+                    // line 91
                     echo "
                 )</span>
             ";
                 }
-                // line 86
+                // line 94
                 echo "            ";
-                if (twig_get_attribute($this->env, $this->source, $context["p"], "hasExceptAuthors", [], "any", false, false, false, 86)) {
-                    // line 87
+                if (twig_get_attribute($this->env, $this->source, $context["p"], "hasExceptAuthors", [], "any", false, false, false, 94)) {
+                    // line 95
                     echo "            <span style=\"color: red;\">(Не&nbspучитываются:
                 ";
-                    // line 88
+                    // line 96
                     $context['_parent'] = $context;
-                    $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, $context["p"], "publication_authors", [], "any", false, false, false, 88));
+                    $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, $context["p"], "publication_authors", [], "any", false, false, false, 96));
                     foreach ($context['_seq'] as $context["_key"] => $context["a"]) {
-                        // line 89
+                        // line 97
                         echo "                ";
-                        ((twig_get_attribute($this->env, $this->source, $context["a"], "is_except", [], "any", false, false, false, 89)) ? (print (twig_escape_filter($this->env, ((((((" " . twig_get_attribute($this->env, $this->source, $context["a"], "surname", [], "any", false, false, false, 89)) . " ") . twig_first($this->env, twig_get_attribute($this->env, $this->source, $context["a"], "name", [], "any", false, false, false, 89))) . ".") . twig_first($this->env, twig_get_attribute($this->env, $this->source, $context["a"], "middlename", [], "any", false, false, false, 89))) . "."), "html", null, true))) : (print ("")));
+                        ((twig_get_attribute($this->env, $this->source, $context["a"], "is_except", [], "any", false, false, false, 97)) ? (print (twig_escape_filter($this->env, ((((((" " . twig_get_attribute($this->env, $this->source, $context["a"], "surname", [], "any", false, false, false, 97)) . " ") . twig_first($this->env, twig_get_attribute($this->env, $this->source, $context["a"], "name", [], "any", false, false, false, 97))) . ".") . twig_first($this->env, twig_get_attribute($this->env, $this->source, $context["a"], "middlename", [], "any", false, false, false, 97))) . "."), "html", null, true))) : (print ("")));
                         echo "
                 ";
                     }
                     $_parent = $context['_parent'];
                     unset($context['_seq'], $context['_iterated'], $context['_key'], $context['a'], $context['_parent'], $context['loop']);
                     $context = array_intersect_key($context, $_parent) + $_parent;
-                    // line 91
+                    // line 99
                     echo "                )</span>
             ";
                 }
-                // line 93
+                // line 101
                 echo "        </li>
         ";
             }
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['p'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 95
+            // line 103
             echo "    </ol>
 </div>
 ";
@@ -279,7 +299,7 @@ class __TwigTemplate_a338380c1e7ab9bffcc9256d7bc3910d3ede110ac7099d0411d34a5ad55
 
     public function getDebugInfo()
     {
-        return array (  264 => 95,  257 => 93,  253 => 91,  244 => 89,  240 => 88,  237 => 87,  234 => 86,  229 => 83,  227 => 82,  224 => 81,  221 => 80,  214 => 79,  210 => 77,  207 => 76,  203 => 75,  198 => 72,  196 => 71,  194 => 70,  188 => 66,  182 => 65,  179 => 64,  170 => 61,  166 => 60,  162 => 59,  158 => 58,  154 => 57,  150 => 56,  146 => 55,  141 => 53,  137 => 52,  133 => 51,  129 => 50,  125 => 49,  121 => 48,  117 => 47,  113 => 46,  109 => 45,  105 => 44,  100 => 42,  96 => 41,  90 => 39,  86 => 38,  81 => 36,  78 => 35,  75 => 34,  71 => 33,  39 => 3,  37 => 2,);
+        return array (  284 => 103,  277 => 101,  273 => 99,  264 => 97,  260 => 96,  257 => 95,  254 => 94,  249 => 91,  247 => 90,  244 => 89,  241 => 88,  234 => 87,  230 => 85,  227 => 84,  223 => 83,  218 => 80,  216 => 79,  214 => 78,  208 => 74,  202 => 73,  199 => 72,  190 => 69,  186 => 68,  182 => 67,  178 => 66,  174 => 65,  170 => 64,  166 => 63,  162 => 62,  158 => 61,  154 => 60,  150 => 59,  145 => 57,  141 => 56,  137 => 55,  133 => 54,  129 => 53,  125 => 52,  121 => 51,  117 => 50,  113 => 49,  109 => 48,  104 => 46,  100 => 45,  94 => 43,  90 => 42,  85 => 40,  82 => 39,  79 => 38,  75 => 37,  39 => 3,  37 => 2,);
     }
 
     public function getSourceContext()
@@ -292,7 +312,7 @@ class __TwigTemplate_a338380c1e7ab9bffcc9256d7bc3910d3ede110ac7099d0411d34a5ad55
         <thead>
             <tr>
                 <th rowspan=\"2\" class=\"left aligned\">Фамилия</th>
-                <th colspan=\"11\">Статьи</th>
+                <th colspan=\"15\">Статьи</th>
                 <th colspan=\"3\">Труды конференций</th>
                 <th rowspan=\"2\">Монографии</th>
                 <th rowspan=\"2\">Свидетельства</th>
@@ -309,6 +329,10 @@ class __TwigTemplate_a338380c1e7ab9bffcc9256d7bc3910d3ede110ac7099d0411d34a5ad55
                 <th>Scopus Q3</th>
                 <th>Scopus Q4</th>
                 <th>Scopus ESCI</th>
+                <th>УБС1</th>
+                <th>УБС2</th>
+                <th>УБС3</th>
+                <th>УБС4</th>
                 <th>РИНЦ</th>
                 <th>Wos</th>
                 <th>Scopus</th>
@@ -338,6 +362,10 @@ class __TwigTemplate_a338380c1e7ab9bffcc9256d7bc3910d3ede110ac7099d0411d34a5ad55
                 <td>{{ author.artScopusQ4Total ? author.artScopusQ4Total|number_format(2, ',') }}</td> <!--Scopus Q4-->
                 <td>{{ author.artScopusQ5Total ? author.artScopusQ5Total|number_format(2, ',') }}</td>
                 <!--Scopus ESCI-->
+                <td>{{ author.artUBS1Total ? author.artUBS1Total|number_format(2, ',') }}</td> <!--УБС1-->
+                <td>{{ author.artUBS2Total ? author.artUBS2Total|number_format(2, ',') }}</td> <!--УБС2-->
+                <td>{{ author.artUBS3Total ? author.artUBS3Total|number_format(2, ',') }}</td> <!--УБС3-->
+                <td>{{ author.artUBS4Total ? author.artUBS4Total|number_format(2, ',') }}</td> <!--УБС4-->
                 <td>{{ author.artRiscTotal ? author.artRiscTotal|number_format(2, ',') }}</td> <!--РИНЦ-->
                 <td>{{ author.procWosTotal ? author.procWosTotal|number_format(2, ',') }}</td> <!--Wos-->
                 <td>{{ author.procScopusTotal ? author.procScopusTotal|number_format(2, ',') }}</td> <!--Scopus-->

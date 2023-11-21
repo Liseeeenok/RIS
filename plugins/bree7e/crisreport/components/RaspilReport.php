@@ -28,7 +28,7 @@ class RaspilReport extends ComponentBase
      *
      * @return float Коэффициент
      */
-    protected function chooseCoefficient(Publication $p): float
+    protected function chooseCoefficient(Publication $p, $filter): float
     {
         $request = Request()->all();
         $request = input();
@@ -36,7 +36,7 @@ class RaspilReport extends ComponentBase
 
         switch ($p->publication_type_id) {
             case '1': // articles
-                if ($p->is_wos) {
+                if ($p->is_wos && ($filter == 'wos' || !$p->is_wl)) {
                     switch ($p->quartile) {
                         case 'Q1':
                             $k = $request['art-wos-q1'];
@@ -54,7 +54,7 @@ class RaspilReport extends ComponentBase
                             $k = $request['art-wos-q5'];
                             break;
                     }
-                } elseif ($p->is_scopus) {
+                } elseif ($p->is_scopus && ($filter == 'wos' || !$p->is_wl)) {
                     switch ($p->quartile_scopus) {
                         case 'Q1':
                             $k = $request['art-scopus-q1'];
@@ -72,19 +72,38 @@ class RaspilReport extends ComponentBase
                             $k = $request['art-scopus-q5'];
                             break;
                     }
+                } elseif ($p->is_wl) {
+                    switch ($p->quartile_wl) {
+                        case 'УБС1':
+                            $k = $request['art-ubs-q1'];
+                            break;
+                        case 'УБС2':
+                            $k = $request['art-ubs-q2'];
+                            break;
+                        case 'УБС3':
+                            $k = $request['art-ubs-q3'];
+                            break;
+                        case 'УБС4':
+                            $k = $request['art-ubs-q4'];
+                            break;
+                        default:
+                            $k = 0;
+                            break;
+                    }
                 } elseif ($p->is_risc) {
                     $k = $request['art-risc'];
                 }
                 break;
 
             case '2': // inproceedings
-                if ($p->is_wos) {
+                if ($p->is_wos && ($filter == 'wos' || !$p->is_wl)) {
                     $k = $request['proc-wos'];
-                } elseif ($p->is_scopus) {
+                } elseif ($p->is_scopus && ($filter == 'wos' || !$p->is_wl)) {
                     $k = $request['proc-scopus'];
+                } elseif ($p->is_wl) {
+                    $k = $request['proc-ubs'];
                 } elseif ($p->is_risc) {
                     $k = $request['proc-risc'];
-
                 }
                 break;
 
@@ -142,6 +161,10 @@ class RaspilReport extends ComponentBase
         $author->artScopusQ3Total = 0;
         $author->artScopusQ4Total = 0;
         $author->artScopusQ5Total = 0;
+        $author->artUBS1Total = 0;
+        $author->artUBS2Total = 0;
+        $author->artUBS3Total = 0;
+        $author->artUBS4Total = 0;
         $author->artRiscTotal = 0;
         $author->procWosTotal = 0;
         $author->procScopusTotal = 0;
@@ -151,11 +174,11 @@ class RaspilReport extends ComponentBase
         return $author;
     }
 
-    protected function addDividedPublicationCoefficientToAuthor(Publication $publication, Author $author): Author
+    protected function addDividedPublicationCoefficientToAuthor(Publication $publication, Author $author, $filter): Author
     {
         switch ($publication->publication_type_id) {
             case '1': // articles
-                if ($publication->is_wos) {
+                if ($publication->is_wos && ($filter == 'wos' || !$publication->is_wl)) {
                     if (!$publication->quartile) {
                         $author->artWosQ5Total += $publication->dividedK;
                     } else {
@@ -177,7 +200,7 @@ class RaspilReport extends ComponentBase
                                 break;
                         }
                     }
-                } elseif ($publication->is_scopus) {
+                } elseif ($publication->is_scopus && ($filter == 'wos' || !$publication->is_wl)) {
                     if (!$publication->quartile_scopus) {
                         $author->artScopusQ5Total += $publication->dividedK;
                     } else {
@@ -199,19 +222,40 @@ class RaspilReport extends ComponentBase
                                 break;
                         }
                     }
+                } elseif ($publication->is_wl) {
+                    if (!$publication->quartile_wl) {
+                        //$author->artScopusQ5Total += $publication->dividedK;
+                    } else {
+                        switch ($publication->quartile_wl) {
+                            case 'УБС1':
+                                $author->artUBS1Total += $publication->dividedK;
+                                break;
+                            case 'УБС2':
+                                $author->artUBS2Total += $publication->dividedK;
+                                break;
+                            case 'УБС3':
+                                $author->artUBS3Total += $publication->dividedK;
+                                break;
+                            case 'УБС4':
+                                $author->artUBS4Total += $publication->dividedK;
+                                break;
+                        }
+                    }
                 } elseif ($publication->is_risc) {
                     $author->artRiscTotal += $publication->dividedK;
                 }
                 break;
-            case '2': // inproceedings
-                if ($publication->is_wos) {
-                    $author->procWosTotal += $publication->dividedK;
-                } elseif ($publication->is_scopus) {
-                    $author->procScopusTotal += $publication->dividedK;
-                } elseif ($publication->is_risc) {
-                    $author->procRiscTotal += $publication->dividedK;
-                }
-                break;
+                case '2': // inproceedings
+                    if ($publication->is_wos && ($filter == 'wos' || !$publication->is_wl)) {
+                        $author->procWosTotal += $publication->dividedK;
+                    } elseif ($publication->is_scopus  && ($filter == 'wos' || !$publication->is_wl)) {
+                        $author->procScopusTotal += $publication->dividedK;
+                    } elseif ($publication->is_wl) {
+                        $author->procUBSTotal += $publication->dividedK;
+                    } elseif ($publication->is_risc) {
+                        $author->procRiscTotal += $publication->dividedK;
+                    }
+                    break;
             case '3': // patents
                 $author->patentTotal += $publication->dividedK;
                 break;
@@ -249,7 +293,7 @@ class RaspilReport extends ComponentBase
             ->keyBy('id');
 
         foreach ($publications as $p) {
-            $p->k = $this->chooseCoefficient($p);
+            $p->k = $this->chooseCoefficient($p, $request['pub-type']);
         }
 
         // отдельный цикл, чтобы сравнить коэффициенты переводных версий
@@ -305,7 +349,7 @@ class RaspilReport extends ComponentBase
                     continue;
                 }
 
-                $authors[$a->id] = $this->addDividedPublicationCoefficientToAuthor($p, $authors[$a->id]);
+                $authors[$a->id] = $this->addDividedPublicationCoefficientToAuthor($p, $authors[$a->id], $request['pub-type']);
             }
         }
 
@@ -332,6 +376,10 @@ class RaspilReport extends ComponentBase
                 $a->artScopusQ3Total +
                 $a->artScopusQ4Total +
                 $a->artScopusQ5Total +
+                $a->artUBS1Total +
+                $a->artUBS2Total +
+                $a->artUBS3Total +
+                $a->artUBS4Total +
                 $a->artRiscTotal +
                 $a->procWosTotal +
                 $a->procScopusTotal +

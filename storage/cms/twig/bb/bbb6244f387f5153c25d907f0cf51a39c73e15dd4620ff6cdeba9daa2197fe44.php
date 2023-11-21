@@ -65,7 +65,7 @@ class __TwigTemplate_f5972b8944be95bfec966af24018ecf7b2b3bd38e4120258a9988c37824
         ";
         } else {
             // line 13
-            echo "        <h2 class=\"ui  header\">По вашему запросу не найдено публикаций</h2>
+            echo "        <h2 class=\"ui header\">По вашему запросу не найдено публикаций</h2>
         ";
         }
         // line 15
@@ -103,7 +103,7 @@ class __TwigTemplate_f5972b8944be95bfec966af24018ecf7b2b3bd38e4120258a9988c37824
     {% endfor %}
     <ol>
         {% else %}
-        <h2 class=\"ui  header\">По вашему запросу не найдено публикаций</h2>
+        <h2 class=\"ui header\">По вашему запросу не найдено публикаций</h2>
         {% endif %}
 
 

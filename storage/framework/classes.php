@@ -277,4 +277,5 @@
   'RainLab\\Pages\\Components\\ChildPages' => 'plugins/rainlab/pages/components/ChildPages.php',
   'Bree7e\\CrisReport\\Components\\List_work' => 'plugins/bree7e/crisreport/components/List_work.php',
   'Bree7e\\CrisReport\\Components\\List_projects' => 'plugins/bree7e/crisreport/components/List_projects.php',
+  'Bree7e\\Cris\\Models\\ProjectsPublications' => 'plugins/bree7e/cris/models/ProjectsPublications.php',
 );

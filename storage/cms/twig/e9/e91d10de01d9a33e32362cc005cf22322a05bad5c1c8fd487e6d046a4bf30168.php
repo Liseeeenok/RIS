@@ -96,7 +96,8 @@ class __TwigTemplate_d9f702eab5e526e5b163704a3d886dcac3396c21bab176f26ca9ee32d25
         <button type=\"submit\" class=\"ui primary button\" data-attach-loading>
             Сформировать
         </button>
-        <button type=\"button\" id=\"get_docx_33\" class=\"ui red button disabled\">
+        <hr>
+        <button type=\"button\" id=\"get_docx_33\" class=\"ui red button disabled\" style=\"margin-bottom: 10px;\">
             Скачать DOCX формы 33
         </button>
         <button type=\"button\" id=\"get_docx_activity\" class=\"ui red button disabled\" style=\"display: none;\">
@@ -105,8 +106,8 @@ class __TwigTemplate_d9f702eab5e526e5b163704a3d886dcac3396c21bab176f26ca9ee32d25
         <button type=\"button\" id=\"get_docx_award\" class=\"ui red button disabled\" style=\"display: none;\">
             Скачать award
         </button>
-        <button type=\"button\" id=\"get_docx_event\" class=\"ui red button disabled\" style=\"display: none;\">
-            Скачать event
+        <button type=\"button\" id=\"get_docx_event\" class=\"ui red button disabled\">
+            Скачать DOCX участия в мероприятиях
         </button>
         <hr style=\"display: none;\">
         <button type=\"button\" id=\"get_docx_grand\" class=\"ui red button disabled\">
@@ -126,9 +127,9 @@ class __TwigTemplate_d9f702eab5e526e5b163704a3d886dcac3396c21bab176f26ca9ee32d25
 <div id=\"result\"></div>
 
 ";
-        // line 59
-        echo $this->env->getExtension('Cms\Twig\Extension')->startBlock('scripts'        );
         // line 60
+        echo $this->env->getExtension('Cms\Twig\Extension')->startBlock('scripts'        );
+        // line 61
         echo "<script>
     \$(document).ready(function () {
         \$('.ui.dropdown')
@@ -216,7 +217,7 @@ class __TwigTemplate_d9f702eab5e526e5b163704a3d886dcac3396c21bab176f26ca9ee32d25
     }
 </script>
 ";
-        // line 59
+        // line 60
         echo $this->env->getExtension('Cms\Twig\Extension')->endBlock(true        );
     }
 
@@ -232,7 +233,7 @@ class __TwigTemplate_d9f702eab5e526e5b163704a3d886dcac3396c21bab176f26ca9ee32d25
 
     public function getDebugInfo()
     {
-        return array (  220 => 59,  132 => 60,  130 => 59,  92 => 23,  77 => 21,  73 => 20,  64 => 13,  59 => 12,  53 => 8,  49 => 7,  42 => 3,  37 => 2,);
+        return array (  221 => 60,  133 => 61,  131 => 60,  92 => 23,  77 => 21,  73 => 20,  64 => 13,  59 => 12,  53 => 8,  49 => 7,  42 => 3,  37 => 2,);
     }
 
     public function getSourceContext()
@@ -266,7 +267,8 @@ class __TwigTemplate_d9f702eab5e526e5b163704a3d886dcac3396c21bab176f26ca9ee32d25
         <button type=\"submit\" class=\"ui primary button\" data-attach-loading>
             Сформировать
         </button>
-        <button type=\"button\" id=\"get_docx_33\" class=\"ui red button disabled\">
+        <hr>
+        <button type=\"button\" id=\"get_docx_33\" class=\"ui red button disabled\" style=\"margin-bottom: 10px;\">
             Скачать DOCX формы 33
         </button>
         <button type=\"button\" id=\"get_docx_activity\" class=\"ui red button disabled\" style=\"display: none;\">
@@ -275,8 +277,8 @@ class __TwigTemplate_d9f702eab5e526e5b163704a3d886dcac3396c21bab176f26ca9ee32d25
         <button type=\"button\" id=\"get_docx_award\" class=\"ui red button disabled\" style=\"display: none;\">
             Скачать award
         </button>
-        <button type=\"button\" id=\"get_docx_event\" class=\"ui red button disabled\" style=\"display: none;\">
-            Скачать event
+        <button type=\"button\" id=\"get_docx_event\" class=\"ui red button disabled\">
+            Скачать DOCX участия в мероприятиях
         </button>
         <hr style=\"display: none;\">
         <button type=\"button\" id=\"get_docx_grand\" class=\"ui red button disabled\">

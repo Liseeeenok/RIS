@@ -189,6 +189,24 @@ class Publication extends Model
                     break;                
             }
         }
+
+        if ($this->is_wl) {
+            if (!$this->quartile_wl) return 'Белый список';
+            switch ($this->quartile_wl) {
+                case 'УБС1':
+                    return 'Уровень белого списка 1';
+                    break;
+                case 'УБС2':
+                    return 'Уровень белого списка 2';
+                    break;
+                case 'УБС3':
+                    return 'Уровень белого списка 3';
+                    break;
+                case 'УБС4':
+                    return 'Уровень белого списка 4';
+                    break;                               
+            }
+        }
         if ($this->is_risc && $this->is_vak) return 'ВАК + РИНЦ';
         if ($this->is_risc) return 'РИНЦ';
         if ($this->is_vak) return 'ВАК';
