@@ -137,7 +137,7 @@ class __TwigTemplate_faed41cd542e8436b0d3e2d40de39281b6351ce0a1e4ff0fd02d2a5b269
         </div>
     </div>
     <div class=\"grouped fields\">
-        <label for=\"pub-type\">Коэффициенты расчёта</label>
+        <label for=\"pub-type\">Методы расчёта</label>
         <div class=\"field\">
             <div class=\"ui radio checkbox\">
                 <input type=\"radio\" name=\"pub-type\" checked value=\"wos\" class=\"hidden\">
@@ -355,7 +355,7 @@ class __TwigTemplate_faed41cd542e8436b0d3e2d40de39281b6351ce0a1e4ff0fd02d2a5b269
         </div>
     </div>
     <div class=\"grouped fields\">
-        <label for=\"pub-type\">Коэффициенты расчёта</label>
+        <label for=\"pub-type\">Методы расчёта</label>
         <div class=\"field\">
             <div class=\"ui radio checkbox\">
                 <input type=\"radio\" name=\"pub-type\" checked value=\"wos\" class=\"hidden\">

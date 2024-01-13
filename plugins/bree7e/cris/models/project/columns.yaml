@@ -18,11 +18,13 @@ columns:
     start_year_date:
         label: 'Дата начала'
         type: date
+        ignoreTimezone: true
         searchable: true
         sortable: true
     finish_year_date:
         label: 'Дата завершения'
         type: date
+        ignoreTimezone: true
         searchable: true
         sortable: true
     project_number:

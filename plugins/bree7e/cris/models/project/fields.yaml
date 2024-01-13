@@ -36,12 +36,14 @@ fields:
         mode: date
         span: left
         type: datepicker
+        ignoreTimezone: true
     finish_year_date:
         label: 'Дата завершения'
         oc.commentPosition: ''
         mode: date
         span: right
         type: datepicker
+        ignoreTimezone: true
     url:
         label: URL
         oc.commentPosition: ''

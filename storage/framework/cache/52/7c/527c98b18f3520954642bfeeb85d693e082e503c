@@ -1,4 +1,4 @@
-1700585283a:1:{s:26:"account/reset-password.htm";a:10:{s:8:"fileName";s:26:"account/reset-password.htm";s:7:"content";s:227:"title = "Сброс пароля"
+1705151638a:1:{s:26:"account/reset-password.htm";a:10:{s:8:"fileName";s:26:"account/reset-password.htm";s:7:"content";s:227:"title = "Сброс пароля"
 url = "/account/forgot-password/:code?"
 layout = "text-container"
 is_hidden = 0

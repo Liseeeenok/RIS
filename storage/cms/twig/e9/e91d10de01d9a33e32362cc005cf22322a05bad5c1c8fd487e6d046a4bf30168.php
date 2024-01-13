@@ -106,8 +106,8 @@ class __TwigTemplate_d9f702eab5e526e5b163704a3d886dcac3396c21bab176f26ca9ee32d25
         <button type=\"button\" id=\"get_docx_award\" class=\"ui red button disabled\" style=\"display: none;\">
             Скачать award
         </button>
-        <button type=\"button\" id=\"get_docx_event\" class=\"ui red button disabled\">
-            Скачать DOCX участия в мероприятиях
+        <button type=\"button\" id=\"get_docx_event\" class=\"ui red button disabled\" style=\"display: none;\">
+            Скачать DOCX об участии в подготовке и проведении найных мероприятий
         </button>
         <hr style=\"display: none;\">
         <button type=\"button\" id=\"get_docx_grand\" class=\"ui red button disabled\">
@@ -116,8 +116,8 @@ class __TwigTemplate_d9f702eab5e526e5b163704a3d886dcac3396c21bab176f26ca9ee32d25
         <button type=\"button\" id=\"get_docx_involvement\" class=\"ui red button disabled\" style=\"display: none;\">
             Скачать involvement
         </button>
-        <button type=\"button\" id=\"get_docx_journal\" class=\"ui red button disabled\" style=\"display: none;\">
-            Скачать journal
+        <button type=\"button\" id=\"get_docx_journal\" class=\"ui red button disabled\">
+            Скачать DOCX об участии в научных мероприятиях
         </button>
         <button type=\"button\" id=\"get_docx_proceedings\" class=\"ui red button disabled\">
             Скачать DOCX списка трудов
@@ -277,8 +277,8 @@ class __TwigTemplate_d9f702eab5e526e5b163704a3d886dcac3396c21bab176f26ca9ee32d25
         <button type=\"button\" id=\"get_docx_award\" class=\"ui red button disabled\" style=\"display: none;\">
             Скачать award
         </button>
-        <button type=\"button\" id=\"get_docx_event\" class=\"ui red button disabled\">
-            Скачать DOCX участия в мероприятиях
+        <button type=\"button\" id=\"get_docx_event\" class=\"ui red button disabled\" style=\"display: none;\">
+            Скачать DOCX об участии в подготовке и проведении найных мероприятий
         </button>
         <hr style=\"display: none;\">
         <button type=\"button\" id=\"get_docx_grand\" class=\"ui red button disabled\">
@@ -287,8 +287,8 @@ class __TwigTemplate_d9f702eab5e526e5b163704a3d886dcac3396c21bab176f26ca9ee32d25
         <button type=\"button\" id=\"get_docx_involvement\" class=\"ui red button disabled\" style=\"display: none;\">
             Скачать involvement
         </button>
-        <button type=\"button\" id=\"get_docx_journal\" class=\"ui red button disabled\" style=\"display: none;\">
-            Скачать journal
+        <button type=\"button\" id=\"get_docx_journal\" class=\"ui red button disabled\">
+            Скачать DOCX об участии в научных мероприятиях
         </button>
         <button type=\"button\" id=\"get_docx_proceedings\" class=\"ui red button disabled\">
             Скачать DOCX списка трудов

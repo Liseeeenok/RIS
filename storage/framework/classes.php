@@ -278,4 +278,8 @@
   'Bree7e\\CrisReport\\Components\\List_work' => 'plugins/bree7e/crisreport/components/List_work.php',
   'Bree7e\\CrisReport\\Components\\List_projects' => 'plugins/bree7e/crisreport/components/List_projects.php',
   'Bree7e\\Cris\\Models\\ProjectsPublications' => 'plugins/bree7e/cris/models/ProjectsPublications.php',
+  'System\\Console\\PluginDisable' => 'modules/system/console/PluginDisable.php',
+  'System\\Console\\PluginEnable' => 'modules/system/console/PluginEnable.php',
+  'System\\Console\\PluginList' => 'modules/system/console/PluginList.php',
+  'System\\Console\\ThemeSync' => 'modules/system/console/ThemeSync.php',
 );
