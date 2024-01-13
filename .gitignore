@@ -1,3 +1,6 @@
 .vscode/
 docx/
-./storage/framework/cache
+storage/framework/cache/
+storage/cms/twig/
+storage/framework/sessions/
+storage/cms/cache/

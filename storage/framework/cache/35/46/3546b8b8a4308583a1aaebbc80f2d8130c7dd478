@@ -1,9 +1,0 @@
-1705152347a:1:{s:20:"projects/project.htm";a:10:{s:8:"fileName";s:20:"projects/project.htm";s:7:"content";s:156:"title = "Страница проекта"
-url = "/projects/:id"
-layout = "no-title"
-is_hidden = 0
-
-[projects]
-id = "{{ :id }}"
-==
-{% component 'projects' %}";s:5:"mtime";i:1681131961;s:6:"markup";s:26:"{% component 'projects' %}";s:4:"code";N;s:5:"title";s:31:"Страница проекта";s:3:"url";s:13:"/projects/:id";s:6:"layout";s:8:"no-title";s:9:"is_hidden";s:1:"0";s:8:"projects";a:1:{s:2:"id";s:9:"{{ :id }}";}}}

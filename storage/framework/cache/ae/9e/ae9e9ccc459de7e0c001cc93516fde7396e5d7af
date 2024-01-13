@@ -1,8 +1,0 @@
-1705152347a:1:{s:16:"reports/year.htm";a:10:{s:8:"fileName";s:16:"reports/year.htm";s:7:"content";s:148:"title = "Годовые отчёты"
-url = "/reports/year-report"
-layout = "full-width"
-is_hidden = 0
-
-[yearReport]
-==
-{% component 'yearReport' %}";s:5:"mtime";i:1681131961;s:6:"markup";s:28:"{% component 'yearReport' %}";s:4:"code";N;s:5:"title";s:27:"Годовые отчёты";s:3:"url";s:20:"/reports/year-report";s:6:"layout";s:10:"full-width";s:9:"is_hidden";s:1:"0";s:10:"yearReport";a:0:{}}}

@@ -1,9 +1,0 @@
-1705152347a:1:{s:25:"projects/project-list.htm";a:10:{s:8:"fileName";s:25:"projects/project-list.htm";s:7:"content";s:159:"title = "Проекты"
-url = "/projects"
-layout = "full-width"
-is_hidden = 0
-
-[projectList]
-projectPage = "projects/project"
-==
-{% component 'projectList' %}";s:5:"mtime";i:1681131961;s:6:"markup";s:29:"{% component 'projectList' %}";s:4:"code";N;s:5:"title";s:14:"Проекты";s:3:"url";s:9:"/projects";s:6:"layout";s:10:"full-width";s:9:"is_hidden";s:1:"0";s:11:"projectList";a:1:{s:11:"projectPage";s:16:"projects/project";}}}

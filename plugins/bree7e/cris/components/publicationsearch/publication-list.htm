@@ -2,7 +2,6 @@
 {% if publications %}
 <h2 class="ui  header">Список публикаций</h2>
 <ol class="ui list">
-
     {% for p in publications %}
     <li>
         {% partial '@publication' publication = p showIndextion = true %}

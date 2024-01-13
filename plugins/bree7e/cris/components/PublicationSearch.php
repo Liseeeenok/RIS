@@ -57,6 +57,11 @@ class PublicationSearch extends ComponentBase
         $this->authors = Author::orderBy('surname')->get();
     }
 
+    public function testF($test) 
+    {
+        $test['quartile'] = 'Q6';
+    }
+
     public function onGetPublications()
     {
         $fromYear = post('fromYear') ?? 1900;
@@ -153,6 +158,49 @@ class PublicationSearch extends ComponentBase
             }
         }
         // Вывод номеров проектов у публикации
+
+        if ($sort_argument == 'count_quartile') { 
+            // если сортировка по квартилям, каждому соответствует свое кол-во баллов
+            // WOS q1 - q4 = 1 - 4
+            // scopus q1 - q4 = 5 - 8
+            // убс q1 - q4 = 9 - 12
+            // wos q5 - 13
+            // scopu q5 - 14
+            // убс q5 - 15
+            // wos null - 16
+            // scopu null - 17
+            // убс null - 18
+            // всё остальное - 100
+            $publications = $publications->each(function ($test) {
+                if ($test->is_wos == 1) {
+                    if ($test->quartile == 'Q1') $test->count_quartile = 1;
+                    elseif ($test->quartile == 'Q2') $test->count_quartile = 2;
+                    elseif ($test->quartile == 'Q3') $test->count_quartile = 3;
+                    elseif ($test->quartile == 'Q4') $test->count_quartile = 4;
+                    elseif ($test->quartile == 'Q5') $test->count_quartile = 13;
+                    elseif ($test->quartile == null) $test->count_quartile = 16;
+                }
+                elseif ($test->is_scopus == 1) {
+                    if ($test->quartile_scopus == 'Q1') $test->count_quartile = 5;
+                    elseif ($test->quartile_scopus == 'Q2') $test->count_quartile = 6;
+                    elseif ($test->quartile_scopus == 'Q3') $test->count_quartile = 7;
+                    elseif ($test->quartile_scopus == 'Q4') $test->count_quartile = 8;
+                    elseif ($test->quartile_scopus == 'Q5') $test->count_quartile = 14;
+                    elseif ($test->quartile_scopus == null) $test->count_quartile = 17;
+                }
+                elseif ($test->is_wl == 1) {
+                    if ($test->quartile_wl == 'УБС1') $test->count_quartile = 9;
+                    elseif ($test->quartile_wl == 'УБС2') $test->count_quartile = 10;
+                    elseif ($test->quartile_wl == 'УБС3') $test->count_quartile = 11;
+                    elseif ($test->quartile_wl == 'УБС4') $test->count_quartile = 12;
+                    elseif ($test->quartile_wl == 'УБС5') $test->count_quartile = 15;
+                    elseif ($test->quartile_wl == null) $test->count_quartile = 18;
+                }
+                else {
+                    $test->count_quartile = 100;
+                }
+            });
+        }
 
         if ($sort_following == "increasing")
             $publications = $publications->sortBy($sort_argument);
