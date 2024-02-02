@@ -57,11 +57,6 @@ class PublicationSearch extends ComponentBase
         $this->authors = Author::orderBy('surname')->get();
     }
 
-    public function testF($test) 
-    {
-        $test['quartile'] = 'Q6';
-    }
-
     public function onGetPublications()
     {
         $fromYear = post('fromYear') ?? 1900;
@@ -73,6 +68,7 @@ class PublicationSearch extends ComponentBase
         $project = post('project') ?? 0; //id
         $sort_argument = post('sort_argument') ?? "author";
         $sort_following = post('sort_following') ?? "increasing";
+        $view_number = post('view_number') ?? "0";
 
         // если указан автор, то не учитвать подразделение
         if ($author > 0) {
@@ -142,19 +138,22 @@ class PublicationSearch extends ComponentBase
         $count_publications = 0;
         $count_projects_publications = 0;
         $number_projects = [];
-        while($count_publications < (count($publications)) && $count_projects_publications < (count($projects_publications))) {
-            if($projects_publications[$count_projects_publications]->publication_id == $publications[$count_publications]->id) {
-                if($projects_publications[$count_projects_publications]->nioktr_number)
-                    array_push($number_projects, $projects_publications[$count_projects_publications]->nioktr_number);
-                if(count($number_projects) > 1) 
-                    $number_projects[count($number_projects)-2] .= ", ";
-                $count_projects_publications += 1;
-            } elseif ($projects_publications[$count_projects_publications]->publication_id > $publications[$count_publications]->id) {
-                $publications[$count_publications]->number_projects = $number_projects;
-                $number_projects = [];
-                $count_publications += 1;
-            } else {
-                $count_projects_publications += 1;
+        //echo '<h1>'.$view_number.'</h1>';
+        if ($view_number == 'on') {
+            while($count_publications < (count($publications)) && $count_projects_publications < (count($projects_publications))) {
+                if($projects_publications[$count_projects_publications]->publication_id == $publications[$count_publications]->id) {
+                    if($projects_publications[$count_projects_publications]->nioktr_number)
+                        array_push($number_projects, $projects_publications[$count_projects_publications]->nioktr_number);
+                    if(count($number_projects) > 1) 
+                        $number_projects[count($number_projects)-2] .= ", ";
+                    $count_projects_publications += 1;
+                } elseif ($projects_publications[$count_projects_publications]->publication_id > $publications[$count_publications]->id) {
+                    $publications[$count_publications]->number_projects = $number_projects;
+                    $number_projects = [];
+                    $count_publications += 1;
+                } else {
+                    $count_projects_publications += 1;
+                }
             }
         }
         // Вывод номеров проектов у публикации

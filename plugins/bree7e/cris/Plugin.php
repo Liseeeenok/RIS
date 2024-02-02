@@ -152,6 +152,12 @@ class Plugin extends PluginBase
                         'url'         => Backend::url('bree7e/cris/projects'),
                         'permissions' => ['bree7e.cris.access_projects']
                     ],
+                    'types_projects' => [
+                        'label'       => 'Типы проектов',
+                        'icon'        => 'icon-folder-o',
+                        'url'         => Backend::url('bree7e/cris/types_projects'),
+                        'permissions' => ['bree7e.cris.access_projects']
+                    ],
                     'authors' => [
                         'label'       => 'Авторы',
                         'icon'        => 'icon-pencil',
