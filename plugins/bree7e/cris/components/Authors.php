@@ -1,5 +1,6 @@
 <?php namespace Bree7e\Cris\Components;
 
+use DB;
 use Auth;
 use Bree7e\Cris\Models\Author;
 use Bree7e\Cris\Models\Project;
@@ -26,6 +27,11 @@ class Authors extends ComponentBase
      * @var array Проекты автора, сгруппированный по годам. Ключи массива - проекты
      */
     public $projects;
+
+    /**
+     * @var array Проекты автора участие, сгруппированный по годам. Ключи массива - проекты
+     */
+    public $projectsPartGroupedByYear;
 
     /**
      * @var string Руководство аспирантами
@@ -112,7 +118,14 @@ class Authors extends ComponentBase
         $projectsGroupedByYear = $projects->groupBy(function($p) {
             return Argon::parse($p->start_year_date)->format('Y');
         });
-
+        
+        $projectsPartId = DB::table('bree7e_cris_authors_projects')->where('rb_author_id', $author->id)->pluck('project_id');
+        $projectsPart = DB::table('bree7e_cris_projects')->whereIn('id', $projectsPartId)->get();
+        $projectsPartGroupedByYear = $projectsPart->groupBy(function($p) {
+            return Argon::parse($p->start_year_date)->format('Y');
+        });
+        
+        $this->projectsPartGroupedByYear = $projectsPartGroupedByYear;
         $this->author = $author;
         $this->publications = $publicationsGroupedByYear;
         $this->projects = $projectsGroupedByYear;

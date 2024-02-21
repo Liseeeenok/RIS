@@ -4,6 +4,7 @@ use Cms\Classes\ComponentBase;
 use Bree7e\Cris\Models\Project;
 use October\Rain\Database\Collection;
 use Cms\Classes\Page;
+use October\Rain\Argon\Argon;
 
 class ProjectList extends ComponentBase
 {
@@ -12,6 +13,11 @@ class ProjectList extends ComponentBase
      */
     public $projects;
     
+    /**
+     * @var October\Rain\Database\Collection Список проектов, без дат
+     */
+    public $projectsWithoutDate;
+
     /**
      * Reference to the page for render project.
      * @var string
@@ -45,8 +51,18 @@ class ProjectList extends ComponentBase
 
     public function onRun()
     {
-        $this->projects = Project::all();
-        $this->projectPage = $this->property('projectPage');        
+        $this->projectPage = $this->property('projectPage');
+        $this->projects = Project::all()
+            ->filter(function($p) { 
+                return $p['start_year_date'];
+            })
+            ->sortByDesc('start_year_date')
+            ->groupBy(function($p) {
+                return Argon::parse($p->start_year_date)->format('Y');
+            });
+        $this->projectsWithoutDate = Project::all()
+            ->filter(function($p) { 
+                return $p['start_year_date'] === null;
+            });
     }
-
 }

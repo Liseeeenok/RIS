@@ -34,6 +34,11 @@ class PublicationSearch extends ComponentBase
         $this->getAuthors();
         $this->getTypes();
         $this->getProjects();
+        $this->onGetPublications();
+
+        //dump($this->page['publications']->filter(function ($element) {return $element['translated_id'];}));
+        //dump($this->page['publications']->where('id', 4545));
+        //dd($this->page['publications'][4154]);
         // Bibliography::main();
     }
 
