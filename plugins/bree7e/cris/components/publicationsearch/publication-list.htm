@@ -5,6 +5,10 @@
     {% for p in publications %}
     <li>
         {% partial '@publication' publication = p showIndextion = true %}
+        {% if p.translatedPublication %}
+        <br>
+        <text style="background: #ffe2cc;">{% partial '@publication' publication = p.translatedPublication %}</text>
+        {% endif %}
     </li>
     {% endfor %}
     <ol>
