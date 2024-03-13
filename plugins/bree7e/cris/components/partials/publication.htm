@@ -3,7 +3,7 @@
     {% set pages = '. С. ' %}
     {% set volume = '. Т. ' %}
 {% elseif publication.language == 'english' %}
-    {% set pages = '. pp. ' %}
+    {% set pages = '. P. ' %}
     {% set volume = '. Vol. ' %}
 {% endif %}
 
@@ -20,6 +20,8 @@
     {{- publication.url ? " URL: " -}}<a href="{{ publication.url }}">{{- publication.url ? publication.url -}}</a>{{- publication.url ? "." -}}
 {% elseif publication.publication_type_id == 3 %}
     <i>{{ publication.authors }}</i> {{ publication.title }}: Свидетельство о государственной регистрации программ для ЭВМ №{{ publication.number }} от {{ publication.published_at|date("d.m.Y") }} М.: Федеральная служба по интеллектуальной собственности, патентам и товарным знакам, {{ publication.year }}.
+{% elseif publication.publication_type_id == 4 %}
+    <i>{{ publication.authors }}</i> {{ publication.title }}: моногр. {{ publication.address }}{{- publication.address ? ". " -}} {{ publication.year }}{{- publication.year ? ". " -}} {{ publication.count_pages }}{{- publication.count_pages ? " С." -}}
 {% elseif publication.publication_type_id == 6 %}
     <i>{{ publication.authors }}</i> {{ publication.title }}: дис. {{ publication.year }}.
 {% else %}
