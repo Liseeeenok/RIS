@@ -120,7 +120,7 @@ class Authors extends ComponentBase
         });
         
         $projectsPartId = DB::table('bree7e_cris_authors_projects')->where('rb_author_id', $author->id)->pluck('project_id');
-        $projectsPart = DB::table('bree7e_cris_projects')->whereIn('id', $projectsPartId)->get();
+        $projectsPart = DB::table('bree7e_cris_projects')->whereIn('id', $projectsPartId)->orderBy('start_year_date', 'desc')->get();
         $projectsPartGroupedByYear = $projectsPart->groupBy(function($p) {
             return Argon::parse($p->start_year_date)->format('Y');
         });
